@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import cart from "./img/cart-120.png";
+import beigeCap from "./img/beige-cap.jpg";
+import LACap from "./img/LA-cap.jpg";
 import "./App.css";
 import { ReactComponent as Plus } from "./icons/plus.svg";
 import { ReactComponent as Chevron } from "./icons/chevron.svg";
@@ -20,15 +22,16 @@ const MenuItem = (props) => {
   const [open, setOpen] = useState(false);
 
   const blockDropdown = () => {
-    
-    console.log(open)
-    if (open === true) {
-      document.querySelector(".outer-container").style.filter = "brightness(70%)";
-    } else if (open === false) {
-      document.querySelector(".outer-container").style.filter = "brightness(100%)";
-    }
-    
+    console.log(open);
     setOpen(!open);
+
+    if (open === false) {
+      document.querySelector(".outer-container").style.filter =
+        "brightness(70%)";
+    } else if (open === true) {
+      document.querySelector(".outer-container").style.filter =
+        "brightness(100%)";
+    }
   };
 
   return (
@@ -119,6 +122,24 @@ const Title = () => {
   );
 };
 
+const Card = (props) => {
+  return (
+    <div className="card-entire-container">
+      <div className="card-img-container">
+        <a href="#" alt="" className="card-link">
+          <img className="beige-cap" alt="" src={props.img} />
+        </a>
+      </div>
+      <div className="card-title">
+        <p>{props.title}</p>
+      </div>
+      <div className="card-content">
+        <p>{props.content}</p>
+      </div>
+    </div>
+  );
+};
+
 // 초기형태 (컴포넌트 나누기 전)
 // const Nav = () => {
 //   return (
@@ -155,7 +176,13 @@ const App = () => {
   return (
     <div className="main-container">
       <Nav></Nav>
-      [Shopping Mall]
+      <Card
+        title="Jeep beige CAP"
+        content="A beige Cap that gives warmth"
+        img={beigeCap}
+      />
+      <Card title="LA Blue CAP" content="A refreshing blue Cap" img={LACap} />
+      
     </div>
   );
 };

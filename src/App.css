@@ -1,12 +1,15 @@
-.main-container {}
+.main-container {
+  background-color: #5F7464;
+}
 
 .outer-container {
   background-color: #FFE6E6;
+  margin-bottom: 20px;
   /* filter: brightness(100%); */
   /* display: flex; */
 }
 .title{
-  color: #8dbed1;
+  color: #5F7464;
   font-size: 40px;
   font-weight: bold;
   font-family: 'Indie Flower', cursive;
@@ -32,7 +35,7 @@
 
 .navbar {
   height: 60px;
-  background-color: #DAEAF1;
+  background-color: #243D25;
   padding: 0 1rem;
   border-bottom: 1px solid white;
 }
@@ -69,6 +72,7 @@
 }
 
 .dropdown {
+  z-index: 2;
   position: absolute;
   top: 58px;
   width: 300px;
@@ -94,4 +98,46 @@
 
 .icon-right {
   margin-left: auto;
+}
+
+/* CARD */
+
+.card-entire-container {
+  display: inline-block;
+  background-color: white;
+  margin: 30px;
+  border: 2px solid #FAD9E6;
+  border-radius: 20px;
+  width: 204px;
+  flex-direction: column;
+  transition: 500ms;
+}
+.card-entire-container:hover {
+  filter: brightness(0.8);
+}
+
+.card-img-container {
+  height: 200px;
+  display: flex;
+}
+
+.card-title {
+  font-weight: 700;
+  font-size: 30px;
+  height: 50px;
+  text-align: center;
+  color: #c752c194;
+  font-family: 'Indie Flower', cursive;
+}
+.card-content {
+  height: 60px;
+  margin: 15px;
+  text-align: left;
+  font-family: 'Indie Flower', cursive;
+  color: #5F7464;
+}
+.beige-cap {
+  height: 200px;
+  border-radius: 15px;
+  margin-left: 1px;
 }
