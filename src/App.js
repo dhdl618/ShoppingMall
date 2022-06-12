@@ -2,6 +2,12 @@ import React, { useState } from "react";
 import cart from "./img/cart-120.png";
 import beigeCap from "./img/beige-cap.jpg";
 import LACap from "./img/LA-cap.jpg";
+import redCap from "./img/red-cap.jpg";
+import banner_1 from "./img/banner-1.jpg";
+import banner_2 from "./img/banner-2.jpg";
+import banner_3 from "./img/banner-3.jpg";
+import banner_4 from "./img/banner-4.jpg";
+
 import "./App.css";
 import { ReactComponent as Plus } from "./icons/plus.svg";
 import { ReactComponent as Chevron } from "./icons/chevron.svg";
@@ -50,7 +56,6 @@ const DropdownMenu = () => {
       <a href="#" className="menu-item">
         <span className="icon-button">{props.leftIcon}</span>
         {props.children}
-
         <span className="icon-right">{props.rightIcon}</span>
       </a>
     );
@@ -140,6 +145,54 @@ const Card = (props) => {
   );
 };
 
+const Footer = (props) => {
+  return (
+    <div></div>
+  )
+}
+
+const Banner = () => {
+
+  const btn1 = () => {
+    document.querySelector('.banner-container').style.transform = 'translate(0vmax)';
+  }
+  const btn2 = () => {
+    document.querySelector('.banner-container').style.transform = 'translate(-100vmax)';
+  }
+  const btn3 = () => {
+    document.querySelector('.banner-container').style.transform = 'translate(-200vmax)';
+  }
+  const btn4 = () => {
+    document.querySelector('.banner-container').style.transform = 'translate(-300vmax)';
+  }
+
+  return (
+    <div>
+      <div style={{overflow: "hidden"}}>
+        <div className="banner-container">
+          <div className="banner-img">
+            <img src={banner_1}></img>
+          </div>
+          <div className="banner-img">
+            <img src={banner_2}></img>
+          </div>
+          <div className="banner-img">
+            <img src={banner_3}></img>
+          </div>
+          <div className="banner-img">
+            <img src={banner_4}></img>
+          </div>
+        </div>
+      </div>
+      <div className="banner-btn-container">
+        <button className="btn" onClick={btn1}></button>
+        <button className="btn" onClick={btn2}></button>
+        <button className="btn" onClick={btn3}></button>
+        <button className="btn" onClick={btn4}></button>
+      </div>
+    </div>
+)
+}
 // 초기형태 (컴포넌트 나누기 전)
 // const Nav = () => {
 //   return (
@@ -176,13 +229,24 @@ const App = () => {
   return (
     <div className="main-container">
       <Nav></Nav>
-      <Card
-        title="Jeep beige CAP"
-        content="A beige Cap that gives warmth"
-        img={beigeCap}
-      />
-      <Card title="LA Blue CAP" content="A refreshing blue Cap" img={LACap} />
-      
+      <div className="card-div">
+        <Card
+          title="Jeep Beige CAP"
+          content="A warmth beige Cap"
+          img={beigeCap}
+        />
+        <Card 
+          title="LA Blue CAP" 
+          content="A refreshing blue Cap" 
+          img={LACap} 
+        />
+        <Card 
+          title="Simple Red CAP" 
+          content="A Strong red Cap" 
+          img={redCap} 
+        />
+      </div>
+      <Banner />
     </div>
   );
 };

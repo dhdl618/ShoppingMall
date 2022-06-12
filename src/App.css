@@ -1,22 +1,22 @@
 .main-container {
-  background-color: #5F7464;
+  background-color: #ffffff;
 }
 
 .outer-container {
-  background-color: #FFE6E6;
-  margin-bottom: 20px;
+  background-color: #ffcccc;
+  margin-top: 10px;
   /* filter: brightness(100%); */
   /* display: flex; */
 }
 .title{
-  color: #5F7464;
+  color: #ffffff;
   font-size: 40px;
   font-weight: bold;
   font-family: 'Indie Flower', cursive;
   text-align: center;
 }
 .text-D{
-  color: #c752c194;
+  color: #7a7a7a;
 }
 .img-logo-link {
   width: 120px;
@@ -34,8 +34,10 @@
 }
 
 .navbar {
+  /* z-index: 1;
+  position: fixed; */
   height: 60px;
-  background-color: #243D25;
+  background-color: #bbbbbb;
   padding: 0 1rem;
   border-bottom: 1px solid white;
 }
@@ -58,7 +60,7 @@
   --button-size: calc(60px * 0.5);
   width: var(--button-size);
   height: var(--button-size);
-  background-color: rgb(255, 248, 239);
+  background-color: rgb(255, 255, 255);
   border-radius: 50%;
   padding: 5px;
   margin: 2px;
@@ -101,13 +103,18 @@
 }
 
 /* CARD */
+.card-div {
+  margin-top: 15px;
+  background-color: #f8f8f8;
+  
+}
 
 .card-entire-container {
   display: inline-block;
   background-color: white;
   margin: 30px;
-  border: 2px solid #FAD9E6;
-  border-radius: 20px;
+  border: 3px solid #ffcccc;
+  border-radius: 10px;
   width: 204px;
   flex-direction: column;
   transition: 500ms;
@@ -126,18 +133,56 @@
   font-size: 30px;
   height: 50px;
   text-align: center;
-  color: #c752c194;
-  font-family: 'Indie Flower', cursive;
+  color: #6b6b6b;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .card-content {
-  height: 60px;
+  height: 45px;
   margin: 15px;
   text-align: left;
-  font-family: 'Indie Flower', cursive;
-  color: #5F7464;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #7a7a7a;
+  font-size: 18px;
 }
 .beige-cap {
   height: 200px;
   border-radius: 15px;
   margin-left: 1px;
+}
+
+/* FOOTER */
+.footer {
+  height: 500px;
+}
+
+/* BANNER */
+.banner-container {
+  margin-top: 20px;
+  width: 400vmax;
+  transition: transform 0.5s;
+}
+
+.banner-img {
+  width: 100vmax;
+  float: left;
+}
+.banner-img img {
+  width: 100%;
+}
+
+.banner-btn-container{
+  text-align: center;
+}
+.btn {
+  background-color: #afafaf;
+  border: none;
+  width: 30px;
+  height: 7px;
+  border-radius: 10px;
+  margin: auto 5px;
+  transition: 0.8s;
+  cursor: pointer;
+}
+.btn:hover{
+  background-color: #525357;
 }
